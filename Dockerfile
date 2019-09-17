@@ -15,7 +15,7 @@ RUN TMP_DIR=/tmp/build && \
     sed -i "s/\(deb\) \(.*\)/\1 \2\n\1-src \2/" /etc/apt/sources.list && \
     sed -i "s/ main$/ main contrib/" /etc/apt/sources.list && \
     apt-get -o Acquire::Check-Valid-Until=false update && \
-    apt-get -y --no-install-recommends install curl unzip dselect build-essential autoconf libproj12 libproj-dev swig && \
+    apt-get -y --no-install-recommends install curl unzip dselect build-essential autoconf libproj13 libproj-dev swig && \
     mkdir -p ${TMP_DIR} && \
     mkdir -p /usr/share/java/ && \
     cd ${TMP_DIR} && \
